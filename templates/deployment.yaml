@@ -37,3 +37,6 @@ spec:
               - name: AWS_DEFAULT_REGION
                 value: "{{ .Values.aws.region }}"
               {{- end }}
+
+    imagePullSecrets:
+      - name: harbor-registry
