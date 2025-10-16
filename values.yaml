@@ -2,7 +2,7 @@
 deployment:
   replicaset: 4
   #pulling from harbor:
-  imagename: 192.168.1.179/devops/myapp
+  imagename: 192.168.1.179/devops/myapp-a
   imagetag: 1
   pullPolicy: IfNotPresent
   #pulling from git: 
