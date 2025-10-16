@@ -14,6 +14,8 @@ spec:
       labels:
         {{- include "app.labels" . | nindent 8 }}
     spec:
+      imagePullSecrets:
+          - name: harbor-registry
       containers:
         - name: {{ .Release.Name }}
           image: {{ .Values.deployment.imagename }}:{{ .Values.deployment.imagetag }}
@@ -36,5 +38,4 @@ spec:
               - name: AWS_DEFAULT_REGION
                 value: "{{ .Values.aws.region }}"
             {{- end }}
-      imagePullSecrets:
-        - name: harbor-registry
+    
